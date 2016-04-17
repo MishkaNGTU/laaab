@@ -1,0 +1,985 @@
+
+*** These modified files were found in JOE when it aborted on Sun Apr  3 23:35:01 2016
+*** JOE was aborted by UNIX signal 15
+
+*** Файл 'staff.cpp'
+#include "staff.h"
+
+int staff::add()
+{
+      
+
+}
+
+*** Файл '(БезИмени)'
+comp.h
+comp.cpp
+staff.h
+staff.cpp
+makefile
+main.cpp
+main.cpp
+staff.cpp
+
+*** These modified files were found in JOE when it aborted on Mon Apr 11 00:00:53 2016
+*** JOE was aborted by UNIX signal 15
+
+*** Файл 'comp.h'
+class comp {
+                   
+    int power, unit, staff;
+    char *name, *ip;
+    
+    public:
+    comp();
+    comp(int  pow,int un, int st , char *nam, char *IP);
+    ~comp();
+    int show();
+    int get_unit();
+    int get_power(); 
+};
+
+*** Файл '(БезИмени)'
+staff.cpp
+staff.cpp
+staff.cpp
+staff.cpp
+staff.cpp
+staff.cpp
+staff.cpp
+staff.cpp
+main.cpp
+menu.h
+comp.h
+
+*** These modified files were found in JOE when it aborted on Tue Apr 12 00:03:27 2016
+*** JOE was aborted by UNIX signal 1
+
+*** Файл '(БезИмени)'
+comp.cpp
+comp.cpp
+comp.h
+comp.cpp
+comp.h
+comp.h
+add.h
+comp.cpp
+comp.cpp
+menu.h
+comp.cpp
+
+*** These modified files were found in JOE when it aborted on Tue Apr 12 00:03:27 2016
+*** JOE was aborted by UNIX signal 1
+
+*** Файл 'comp.cpp'
+#include "functions.h"
+#include <iostream>
+#include <cstring>
+
+comp::comp()
+{
+ staff = 0;
+ power = 0;
+ unit =0;
+ name = new char[100];
+ ip = new char[16];
+}
+
+comp::comp(int pow,int un, int st, char *nam, char *IP ) 
+{
+   
+   power = pow;
+   unit = un;
+   staff = st;
+   name = new char[100];
+   strcpy (name,nam);
+   ip = new char[16];
+   strcpy (ip,IP);
+   
+}   
+
+int comp::show() 
+{
+   std::cout << "\n Number staff's:" << staff;
+   std::cout << "\n Name: " << name ;
+   std::cout << "\n IP: " << ip;
+   std::cout << "\n Power: " << power;
+   std::cout << "\n Unit: " << unit ;
+
+}
+
+
+int comp::get_unit()
+{
+ return unit;
+}
+
+
+int comp::get_power()
+{
+ return power;
+}
+
+comp::~comp()
+{
+ delete []name;
+ delete []ip;//? []
+}
+
+
+int menu()
+{
+int c;
+    printf ("\n\n");
+        printf("1. Считать базу\n");     
+            printf("2. Создать новый шкаф\n");
+                printf("3. Добавить компьютерное оборудование в шкаф\n");
+                    printf("4. Вывести информацию\n");
+                        printf("5. Удалить шкаф\n");
+                            printf("6. Удалить компьютерное оборудование\n");
+                                printf("7. Редактирование шкафа\n");
+                                    printf("8. Узнать мощность, потребляемую шкафом\n");
+                                        printf("9. Сохранить изменения базы данных\n");
+                                            printf("10. Поиск\n");
+                                                printf("11. Выход\n");
+                                                    
+                                                        
+                                                            do  
+                                                                  {
+                                                                        printf("\nВведите нужный номер: ");
+                                                                              scanf("%d",&c);
+                                                                                    } 
+                                                                                            while(c < 1 || c > 11);
+                                                                                                    return c;
+
+
+
+}
+
+
+
+
+int comp::add (vector<comp> &ob )//ДОБАВЛЕНИЕ КОМПЬЮТЕРА
+{
+   int pow, un, st;
+   char *nam, *IP;
+   
+   
+   cout << "Enter the number of staff" << "\n";
+   cin >> st;
+   
+   cout << "Enter the name of computer" << "\n";
+   cin >> *nam;
+   
+   cout << "Enter the power of computer" << "\n";    
+   cin >> pow;
+   
+   cout << "Enter the unit of computer" << "\n";
+   cin >> un;
+   
+   cout << "Enter the IP of computer" << "\n";
+   cin >> *IP;
+   
+   ob.push_back (comp(int pow,int un, int st, char *nam, char *IP ));
+   
+   return 0;
+
+}
+
+
+
+
+
+
+*** Файл '(БезИмени)'
+comp.cpp
+comp.h
+comp.cpp
+comp.h
+comp.h
+add.h
+comp.cpp
+comp.cpp
+menu.h
+main.cpp
+comp.cpp
+
+*** These modified files were found in JOE when it aborted on Tue Apr 12 00:03:27 2016
+*** JOE was aborted by UNIX signal 15
+
+*** Файл '(БезИмени)'
+comp.h
+add.h
+comp.cpp
+comp.cpp
+menu.h
+main.cpp
+comp.cpp
+main.cpp
+comp.cpp
+main.cpp
+fuctions.h
+
+*** These modified files were found in JOE when it aborted on Tue Apr 12 00:03:27 2016
+*** JOE was aborted by UNIX signal 15
+
+*** Файл '(БезИмени)'
+functions.h
+comp.cpp
+comp.h
+comp.cpp
+comp.cpp
+comp.h
+comp.cpp
+comp.cpp
+comp.cpp
+comp.cpp
+functions.cpp
+
+*** These modified files were found in JOE when it aborted on Tue Apr 12 00:03:27 2016
+*** JOE was aborted by UNIX signal 15
+
+*** Файл '(БезИмени)'
+functions.h
+comp.cpp
+functions.h
+main.cpp
+comp.cpp
+comp.cpp
+comp.h
+functions.h
+comp.cpp
+main.cpp
+main.cpp
+
+*** These modified files were found in JOE when it aborted on Tue Apr 12 00:03:27 2016
+*** JOE was aborted by UNIX signal 15
+
+*** Файл '(БезИмени)'
+functions.h
+comp.cpp
+functions.h
+main.cpp
+comp.cpp
+comp.cpp
+comp.h
+functions.h
+comp.cpp
+main.cpp
+main.cpp
+
+*** These modified files were found in JOE when it aborted on Tue Apr 12 00:03:27 2016
+*** JOE was aborted by UNIX signal 15
+
+*** Файл '(БезИмени)'
+comp.cpp
+comp.h
+functions.h
+comp.cpp
+main.cpp
+comp.cpp
+comp.cpp
+comp.h
+comp.cpp
+comp.cpp
+main
+=.cpp
+
+*** These modified files were found in JOE when it aborted on Wed Apr 13 01:10:46 2016
+*** JOE was aborted by UNIX signal 15
+
+*** Файл '(БезИмени)'
+comp.cpp
+main.cpp
+comp.cpp
+comp.cpp
+comp.cpp
+comp.h
+comp.cpp
+comp.h
+comp.h
+comp.cpp
+comp.cpp
+
+*** These modified files were found in JOE when it aborted on Thu Apr 14 20:38:27 2016
+*** JOE was aborted by UNIX signal 15
+
+*** Файл '(БезИмени)'
+main.cpp
+main.cpp
+comp.cpp
+comp.cpp
+comp.cpp
+functions.h
+comp.cpp
+main.cpp
+comp.cpp
+comp.cpp
+makefil
+
+*** These modified files were found in JOE when it aborted on Thu Apr 14 20:38:27 2016
+*** JOE was aborted by UNIX signal 15
+
+*** Файл '(БезИмени)'
+main.cpp
+main.cpp
+comp.cpp
+comp.cpp
+comp.cpp
+functions.h
+comp.cpp
+main.cpp
+comp.cpp
+comp.cpp
+makefile
+
+*** These modified files were found in JOE when it aborted on Fri Apr 15 14:38:12 2016
+*** JOE was aborted by UNIX signal 15
+
+*** Файл 'comp.cpp'
+#include "functions.h"
+#include <iostream>
+#include <cstring>
+#include <fstream>
+using namespace std;
+
+
+comp::comp()
+{
+ staff = 0;
+ power = 0;
+ unit =0;
+ name = new char[100];
+ ip = new char[16];
+}
+
+comp::comp(int pow,int un, int st, char *nam, char *IP ) 
+{
+   
+   power = pow;
+   unit = un;
+   staff = st;
+   name = new char[100];
+   strcpy (name,nam);
+   ip = new char[16];
+   strcpy (ip,IP);
+   
+}   
+
+int comp::show() 
+{
+   std::cout << "\n Number staff's:" << staff;
+   std::cout << "\n Name: " << name ;
+   std::cout << "\n IP: " << ip;
+   std::cout << "\n Power: " << power;
+   std::cout << "\n Unit: " << unit ;
+
+}
+
+
+int comp::operator > (comp ob2)
+{return (staff > ob2.staff);}
+
+
+int comp::operator < (comp ob2)
+{return (staff < ob2.staff);}
+
+
+comp& comp::operator = (comp & ob)
+{
+   staff=ob.staff;
+   power=ob.power;
+   unit=ob.unit;
+   name = new char[100];
+   strcpy (name,ob.name);
+   ip = new char[16];
+   strcpy (ip,ob.ip);
+   return *this;
+
+}
+
+
+
+int comp::get_unit()
+{
+ return unit;
+}
+
+
+int comp::get_power()
+{
+ return power;
+}
+
+int comp::get_staff()
+{
+ return staff;
+}
+
+
+char* &comp::get_name()
+{
+ return name;
+}
+
+/*comp::~comp()
+{
+ delete []name;
+ delete []ip;//? []
+}*/
+
+
+int menu()// МЕНЮ 
+{
+     int c;
+     
+     cout << "\n\n";
+     cout << "1. Считать базу" << "\n";
+     cout << "2. Добавить компьютер в шкаф" << "\n";
+     cout << "3. Вывести информацию" << "\n";
+     cout << "4. Редактирование" << "\n";
+     cout << "9. Сохранить информацию" << "\n";
+     cout << "10. Выход" << "\n";
+     
+     do {
+     
+     cout << "\n" << "Введите нужный номер: ";
+     cin >> c;
+     
+     } while (c<1||c>10);
+       return c;
+   
+
+}
+
+
+
+
+int add (vector<comp> &ob) //ДОБАВЛЕНИЕ КОМПЬЮТЕРА
+{
+   int pow, un, st;
+   char *nam = new char [100], *IP = new char [100];
+   
+  
+   
+   cout << "Enter the number of staff" << "\n";
+   cin >> st;
+   
+   cout << "Enter the name of computer" << "\n";
+   cin >> nam;
+   
+   cout << "Enter the power of computer" << "\n";    
+   cin >> pow;
+   
+   cout << "Enter the unit of computer" << "\n";
+   cin >> un;
+   
+   cout << "Enter the IP of computer" << "\n";
+   cin >> IP;
+   
+   ob.push_back (comp(pow,un,st, nam, IP ));
+   
+   return 1;
+
+}
+
+int see (vector<comp> &ob) // ВЫВОД
+{
+  int i;
+    
+       for(i=0;i<ob.size();i++)
+          
+           {
+            cout<<"\n\n";
+            ob[i].show();
+           };
+           
+           std::cout<<"\n";
+  
+
+
+}
+
+
+int sortirovka(vector<comp> &ob)
+{
+
+ comp cop;
+ int i, flag;
+ 
+ 
+ while (1) 
+ {
+
+ flag=0;
+
+ for (i=0;i<ob.size()-1;i++)
+   { 
+     if (ob[i]>ob[i+1])
+           {
+            cop=ob[i+1];
+            ob[i+1]=ob[i];
+            ob[i]=cop;
+            flag=1;
+           }
+   }        
+    if (flag==0) break;
+  }
+   return 1;       
+}
+
+
+int zapis_f(std::ostream & stream,const comp &ob)
+{
+    stream<<ob.staff<<"\n";
+    stream<<ob.name<<"\n";
+    stream<<ob.power<<"\n";
+    stream<<ob.unit<<"\n";
+    stream<<ob.ip;
+    return 1;
+}
+
+int write(std::vector<comp> &ob, char *namefile) // Запись в файл
+{
+  int i;
+  std::ofstream fox(namefile);
+  if(ob.size()>0)
+            {
+              zapis_f(fox,ob[0]);
+              for (i=1;i<ob.size();i++)
+               {
+                fox<<"\n";
+                zapis_f(fox,ob[i]);
+               }   
+            }
+  fox.close();
+  cout << "Данные сохранены в файле: "<< namefile <<"\n";
+}
+
+int chtenie_f (std::istream & stream,comp &ob )
+{
+    stream>>ob.staff;
+    stream>>ob.name;
+    stream>>ob.power;
+    stream>>ob.unit;8
+    stream>>ob.ip;
+    return 1;
+}
+
+
+int read(std::vector<comp> &ob, char *namefile) //чтение из файла
+{
+ std::ifstream fin(namefile);
+ int i=0;
+ ob.clear();
+ if(!fin)
+        {
+         return 0;
+        }
+  ob.push_back(comp());      
+  while (1)
+          {
+           if (fin.eof()==1) break;
+           ob.push_back(comp());
+           chtenie_f(fin, ob[i]);
+           i++;
+          }
+          ob.pop_back();      
+  fin.close();
+  cout << " Данные успешно считаны ";
+  return 1;      
+
+}
+
+
+int redact(vector<comp> &ob)
+{
+ int pow, un, st, shk,flag,i;
+ char *nam = new char [100], *IP = new char [100], *cmp = new char[100]; 
+ 
+ cout << "Введите номер шкафа: ";
+ cin >> shk;
+ 
+        for (i=0;i<ob.size();i++)
+          {
+             if (ob[i].get_staff()==shk)
+                      {
+                       cout << "Введите название компьютера: ";         
+                       cin >> cmp;
+                       if (strcmp(cmp,ob[i].get_name())==0)
+                                       {
+                                        cout << "Enter the name of computer" << "\n";
+                                        cin >> nam;
+   
+                                        cout << "Enter the power of computer" << "\n";    
+                                        cin >> pow;
+   
+                                        cout << "Enter the unit of computer" << "\n";
+                                        cin >> un;
+   
+                                        cout << "Enter the IP of computer" << "\n";
+                                        cin >> IP;
+   
+                                        ob.push_back (comp(pow,un,st, nam, IP ));
+                                        break;  
+                                       } 
+                       else { cout << "\n" << "Нет такого компьютера" << "\n";break; }                 
+                      }  
+                        
+          
+          }
+return 1;          
+}
+/*
+int schetcomp(vector<comp> &ob)
+{
+  while(1)
+   {
+       
+   
+   }
+ 
+
+}
+*/
+
+*** Файл '(БезИмени)'
+comp.cpp
+comp.cpp
+comp.cpp
+comp.cpp
+comp.h
+comp.cpp
+comp.cpp
+comp.cpp
+comp.cpp
+comp.h
+comp.cpp
+
+*** These modified files were found in JOE when it aborted on Fri Apr 15 15:54:21 2016
+*** JOE was aborted by UNIX signal 15
+
+*** Файл 'comp.cpp'
+#include "functions.h"
+#include <iostream>
+#include <cstring>
+#include <fstream>
+using namespace std;
+
+
+comp::comp()
+{
+ staff = 0;
+ power = 0;
+ unit =0;
+ name = new char[100];
+ ip = new char[16];
+}
+
+comp::comp(int pow,int un, int st, char *nam, char *IP ) 
+{
+   
+   power = pow;
+   unit = un;
+   staff = st;
+   name = new char[100];
+   strcpy (name,nam);
+   ip = new char[16];
+   strcpy (ip,IP);
+   
+}
+
+int comp::zamena (int pow, int un, char *nam, char *IP)
+{
+   power = pow;
+   unit = un;
+   name = new char[100];
+   strcpy (name,nam);
+   ip = new char[16];
+   strcpy (ip,IP);
+}   
+
+int comp::show() 
+{
+   std::cout << "\n Number staff's:" << staff;
+   std::cout << "\n Name: " << name ;
+   std::cout << "\n IP: " << ip;
+   std::cout << "\n Power: " << power;
+   std::cout << "\n Unit: " << unit ;
+
+}
+
+
+int comp::operator > (comp ob2)
+{return (staff > ob2.staff);}
+
+
+int comp::operator < (comp ob2)
+{return (staff < ob2.staff);}
+
+
+comp& comp::operator = (comp & ob)
+{
+   staff=ob.staff;
+   power=ob.power;
+   unit=ob.unit;
+   name = new char[100];
+   strcpy (name,ob.name);
+   ip = new char[16];
+   strcpy (ip,ob.ip);
+   return *this;
+
+}
+
+
+
+int comp::get_unit()
+{
+ return unit;
+}
+
+
+int comp::get_power()
+{
+ return power;
+}
+
+int comp::get_staff()
+{
+ return staff;
+}
+
+
+char* comp::get_name()
+{
+ return name;
+}
+
+/*comp::~comp()
+{
+ delete []name;
+ delete []ip;//? []
+}*/
+
+
+int menu()// МЕНЮ 
+{
+     int c;
+     
+     cout << "\n\n";
+     cout << "1. Считать базу" << "\n";
+     cout << "2. Добавить компьютер в шкаф" << "\n";
+     cout << "3. Вывести информацию" << "\n";
+     cout << "4. Редактирование" << "\n";
+     cout << "9. Сохранить информацию" << "\n";
+     cout << "10. Выход" << "\n";
+     
+     do {
+     
+     cout << "\n" << "Введите нужный номер: ";
+     cin >> c;
+     
+     } while (c<1||c>10);
+       return c;
+   
+
+}
+
+
+
+
+int add (vector<comp> &ob) //ДОБАВЛЕНИЕ КОМПЬЮТЕРА
+{
+   int pow, un, st;
+   char *nam = new char [100], *IP = new char [100];
+   
+  
+   
+   cout <<"\n" <<"Введите номер шкафа" << "\n";
+   cin >> st;
+   
+   cout << "Введите имя компьютера" << "\n";
+   cin >> nam;
+   
+   cout << "Введите мощность компьютера" << "\n";    
+   cin >> pow;
+   
+   cout << "Введите размеры компьютера(в юнитах)" << "\n";
+   cin >> un;
+   
+   cout << "Введите IP адрес" << "\n";
+   cin >> IP;
+   
+   ob.push_back (comp(pow,un,st, nam, IP ));
+   
+   return 1;
+
+}
+
+int see (vector<comp> &ob) // ВЫВОД
+{
+  int i;
+     
+       for(i=0;i<ob.size();i++)
+          
+           {
+            cout<<"\n\n";
+            ob[i].show();
+           };
+           
+           std::cout<<"\n";
+  
+
+
+}
+
+
+int sortirovka(vector<comp> &ob)
+{
+
+ comp cop;
+ int i, flag;
+ 
+ 
+ while (1) 
+ {
+
+ flag=0;
+
+ for (i=0;i<ob.size()-1;i++)
+   { 
+     if (ob[i]>ob[i+1])
+           {
+            cop=ob[i+1];
+            ob[i+1]=ob[i];
+            ob[i]=cop;
+            flag=1;
+           }
+   }        
+    if (flag==0) break;
+  }
+   return 1;       
+}
+
+
+int zapis_f(std::ostream & stream,const comp &ob)
+{
+    stream<<ob.staff<<"\n";
+    stream<<ob.name<<"\n";
+    stream<<ob.power<<"\n";
+    stream<<ob.unit<<"\n";
+    stream<<ob.ip;
+    return 1;
+}
+
+int write(std::vector<comp> &ob, char *namefile) // Запись в файл
+{
+  int i;
+  std::ofstream fox(namefile);
+  if(ob.size()>0)
+            {
+              zapis_f(fox,ob[0]);
+              for (i=1;i<ob.size();i++)
+               {
+                fox<<"\n";
+                zapis_f(fox,ob[i]);
+               }   
+            }
+  fox.close();
+  cout <<"\n" << "Данные сохранены в файле: "<< namefile <<"\n";
+}
+
+int chtenie_f (std::istream & stream,comp &ob )
+{
+    stream>>ob.staff;
+    stream>>ob.name;
+    stream>>ob.power;
+    stream>>ob.unit;
+    stream>>ob.ip;
+    return 1;
+}
+
+
+
+int read(std::vector<comp> &ob, char *namefile) //чтение из файла
+{
+ std::ifstream fin(namefile);
+ int i=0;
+ ob.clear();
+ if(!fin)
+        {
+         return 0;
+        }
+  ob.push_back(comp());      
+  while (1)
+          {
+           if (fin.eof()==1) break;
+           ob.push_back(comp());
+           chtenie_f(fin, ob[i]);
+           i++;
+          }
+          ob.pop_back();      
+  fin.close();
+  cout << "\n"<<" Данные успешно считаны "<<"\n";
+  return 1;      
+
+}
+
+
+int redact(vector<comp> &ob)
+{
+ int pow, un, st, shk,flag,i;
+ char *nam = new char [100], *IP = new char [100], *cmp = new char[100]; 
+ 
+ cout <<"\n" <<"Введите номер шкафа: ";
+ cin >> shk;
+ 
+        for (i=0;i<ob.size();i++)
+          {
+             if (ob[i].get_staff()==shk)
+                      {
+                       cout <<"\n" << "Введите название компьютера: ";         
+                       cin >> cmp;
+                       if (strcmp(cmp,ob[i].get_name())==0)
+                                       {
+                                        cout << "Введите новое название компьютера" << "\n";
+                                        cin >> nam;
+                                           
+                                        cout << "Введите новую мощность компьютера" << "\n";    
+                                        cin >> pow;
+   
+                                        cout << "Введите новые размеры компьютера" << "\n";
+                                        cin >> un;
+   
+                                        cout << "Введите новый IP адрес" << "\n";
+                                        cin >> IP;
+   
+                                        ob[i].zamena( pow,un, nam, IP);
+                                        break;  
+                                       } 
+                       else { cout << "\n" << "!!!Нет такого компьютера!!!" << "\n";break; }                 
+                      }  
+                        
+          
+          }
+return 1;          
+}
+
+int destaff (vector<comp> &ob)// Удалить шкаф
+{
+  int shk;
+  cout << "Введите номер шкафа, кторый хотите удалить";
+  cin >> shk;
+
+*** Файл '(БезИмени)'
+comp.h
+comp.cpp
+comp.cpp
+comp.h
+comp.cpp
+comp.cpp
+comp.cpp
+main.cpp
+functions.h
+comp.cpp
+comp.cpp
